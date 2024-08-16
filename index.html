@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Household goods for the home and garden">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations-магазин госптоварів</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/icomoon/icomoon.css">
+<script defer src="bundle.js"></script></head>
+<body>
+    <!-- Burger -->
+    <header class="header">
+        <button class="burger-btn" id="burger" aria-label="Бургер меню">
+            <span></span><span></span><span></span>
+        </button>
+        <!-- Burger Menu -->
+        <div class="nav-full-burger" id="nav-full-burger">
+            <ul>
+                <li><a href="#!">Каталог товарів</a></li>
+                <li><a href="#!">% Всі акційні товари</a></li>
+                <li><a href="#!"><span>New</span>Нові надходження</a></li>
+                <li><a href="#!"><img class="icon" src="img/telegram-color.png" alt="icontelegram">Телеграм-канал</a></li> 
+                <li><a href="#!">Про магазин</a></li>
+                <li><a href="#!">Доставка і оплата</a></li>
+                <li><a href="#!">Гарантії</a></li>
+                <li><a href="#!">Питання-Відповідь</a></li>
+                <li><a href="#!">Співпраця</a></li>
+                <li><a href="#!">Статті</a></li>
+                <li><a href="#!">Новини</a></li>
+                <li><a href="#!">Контакти</a></li>
+            </ul>
+        </div>
+        <!-- Mobile search -->
+        <div class="mobile-search" id="mobile-search" aria-hidden="true">
+            <div class="mobile-search__content">
+                <form class="form" action="" method="post">
+                    <input class="mobile-search__search-input" type="search" placeholder="Пошук по сайту.." aria-label="Поле пошуку">
+                    <button class="mobile-search__search-btn" aria-label="Почати пошук"><i class="icon-search"></i></button>	
+                </form>
+            </div>
+        </div>
+        <!-- Modal entrance -->
+        <div class="modal" aria-hidden="true" data-modal="1">
+            <div class="modal__content">
+                <form class="modal__form" action="#" method="post" id="form-modal-entrance">
+                    <svg class="modal__close js-close-modal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                    <h2 class="title">Вхід/Реєстрація</h2>
+                    <div class="form-item">
+                        <label class="form-label" for="email">E-Mail:</label>
+                        <input class="form-input" type="email" id="email">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="password">Пароль:</label>
+                        <input class="form-input" type="password" id="password">
+                    </div>
+                </form>
+                <div class="flex-box modal__bottom">
+                    <label for="checkbox-remember">
+                        <input class="checkbox-remember" type="checkbox" id="checkbox-remember">
+                        Запам'ятати мене
+                    </label>
+                    <a href="#!">Забули пароль?</a>
+                </div>
+                <button class="modal__btn-entrance btn-modal">Увійти</button>
+                <a class="modal__a-reg btn-modal" href="">Зареєструватись</a>
+            </div>
+        </div>
+        <!-- Modal feadback -->
+        <div class="modal" aria-hidden="true" data-modal="2">
+            <div class="modal__content">
+                <form class="modal__form" action="#" method="post" id="form-modal-feadback">
+                    <svg class="modal__close js-close-modal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                    <h2 class="title">Зворотній зв'язок</h2>
+                    <div class="form-item">
+                        <label class="form-label" for="name">Ім'я:</label>
+                        <input class="form-input" type="text" id="name">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="tel">Номер телефону:</label>
+                        <input class="form-input" type="tel" id="tel" placeholder="(0__)_ __ __ __">
+                    </div>
+                </form>
+                <button class="modal__btn-entrance btn-modal">Зв'яжіться зі мною</button>
+            </div>
+        </div>
+        <div class="modal__overlay js-overlay-modal"></div>
+        <!-- Header top -->
+        <div class="header-top">
+            <div class="container flex-box gap">
+                <nav class="nav header-top__nav padding">
+                    <ul class="flex-box gap">
+                        <li><a href="#!">Про магазин</a></li>
+                        <li><a href="#!">Доставка і оплата</a></li>
+                        <li><a href="#!">Гарантії</a></li>
+                        <li><a href="#!">Питання-Відповідь</a></li>
+                        <li><a href="#!">Співпраця</a></li>
+                        <li><a href="#!">Статті</a></li>
+                        <li><a href="#!">Новини</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="header-top__modal-window flex">
+                    <button class="feadback-btn padding js-open-modal" data-modal="2">
+                        <i class="icon-comment"></i><span class="none-first">Зворотній зв'язок</span>
+                    </button>
+                    <button class="reg-btn padding js-open-modal" data-modal="1">
+                        <i class="icon-user"></i><span class="none-first">Вхід/</span>
+                        <span class="none-first">Реєстрація</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Header mobile -->
+        <div class="header-mobile flex-box">
+            <img class="logo" src="img/logo.png" alt="Логотип">
+            <div>
+                <button class="search-btn open-mobile-search" aria-label="Розпочати пошук" id="open-mobile-search"><i class="icon-search"></i></button>
+                <button class="js-open-modal" data-modal="2" aria-label="Зворотній зв'язок"><i class="icon-comment" ></i></button>
+                <button class="js-open-modal" data-modal="1" aria-label="Реєстрація/Вхід"><i class="icon-user"></i></button>
+                <a class="header-middle__favorites" href="#!" aria-label="Вибране"><i class="icon-heart color-pink"></i></a>
+                <a class="header-middle__basket" href="#!" aria-label="Кошик"><i class="icon-cart-plus color-pink"></i></a>     
+            </div>
+        </div>
+        <!-- Header middle -->
+        <div class="header-middle">
+            <div class="container flex-box">
+                <a href="index.html"><img class="logo" src="img/logo.png" alt="Логотип"></a>
+                <p class="none-first">Доставка за 2-4 дні</p>
+                <form class="search-form" action="" method="get">
+                    <input class="search-input" type="search" id="search" placeholder="Пошук по сайту.." aria-label="Поле пошуку">
+                    <button class="search-btn" aria-label="Розпочати пошук"><i class="icon-search"></i></button>
+                </form>
+                <a class="header-middle__telephone none-two" href="tel:11111111111"><i class="icon-phone color-pink"></i>11111111111</a>
+                <a class="header-middle__favorites" href="#"><i class="icon-heart color-pink"></i><span class="none">Вибране</span><br><span class="header-middle__span-left color-gray none">На потім</span></a>
+                <a class="header-middle__basket" href="#"><i class="icon-cart-plus color-pink"></i><span class="none">Ваш кошик</span><br><span class="header-middle__span-right color-gray none">Поки що ще порожньо</span></a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <ul class="flex-box">
+                    <li class="catalog"><a class="header-bottom__catalog padding" href="#!"><i class="icon-dedent"></i>Каталог товарів<i class="icon-long-arrow-down"></i></a>
+                        <ul class="dropdown-content-color-light">
+                            <li class="dropdown-item"><a href="#"><i class="icon-battery"></i><br>Батарейки</a>
+                                <ul class="dropdown-content-color-dark">
+                                    <li><a href="#!">Пунтк 1</a></li>
+                                    <li><a href="#!">Пункт 2</a></li>
+                                    <li><a href="#!">Пункт 3</a></li>
+                                    <li><a href="#!">Пунтк 4</a></li>
+                                    <li><a href="#!">Пункт 5</a></li>
+                                    <li><a href="#!">Пункт 6</a></li>
+                                    <li><a href="#!">Пунтк 1</a></li>
+                                    <li><a href="#!">Пункт 2</a></li>
+                                    <li><a href="#!">Пункт 3</a></li>
+                                    <li><a href="#!">Пунтк 4</a></li>
+                                    <li><a href="#!">Пункт 5</a></li>
+                                    <li><a href="#!">Пункт 6</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item"><a href="#!"><i class="icon-plug"></i><br>Для дому</a>
+                                <ul class="dropdown-content-color-dark">
+                                    <li><a href="#!">Пункт 1</a></li>
+                                    <li><a href="#!">Пункт 2</a></li>
+                                    <li><a href="#!">Пункт 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item"><a href="#"><i class="icon-leaf"></i><br>Для cаду</a>
+                                <ul class="dropdown-content-color-dark">
+                                    <li><a href="#!">Пункт 1</a></li>
+                                    <li><a href="#!">Пункт 2</a></li>
+                                    <li><a href="#!">Пункт 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-bottom__sale padding"><a href="#!">% Всі акційні товари</a></li>
+                    <li class="header-bottom__new padding"><a href="#!">New Нові надходження</a></li>
+                    <li class="header-bottom__social padding"><a href="@telegram"><img class="icon" src="img/telegram-color.png" alt="icontelegram">Телеграм-канал</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-page flex">
+            <div class="slider-arrow">
+                <div class="slider-arrow__nav">
+                    <button class="slider-arrow__arrow slider-arrow--left" aria-label="Погортати слайди вліво">&lt;</button>
+                    <a class="a-link" href="#!">Каталог</a>
+                    <button class="slider-arrow__arrow slider-arrow--right" aria-label="Погортати слайди вправо">></button>
+                </div>
+                <div class="slider-arrow__items">
+                    <a href="#!"><img class="slider-arrow__item" src="img/slider-item1.png" alt="Розпродаж"></a>
+                    <a href="#!"><img class="slider-arrow__item" src="img/slider-item2.png" alt="Розпродаж"></a>
+                    <a href="#!"><img class="slider-arrow__item" src="img/slider-item3.png" alt="Розпродаж"></a>
+                </div> 
+            </div>
+            <div class="banners-block">
+                <div class="banners-block__top">
+                    <a href="#!"><img src="img/banner-sale.jpg" alt="Знижки"></a>
+                </div>
+                <div class="banners-block__down flex">
+                    <div class="delivery">
+                        <a href="#!"><img src="img/banner-delivery.jpg" alt="Доставка"></a>
+                    </div>
+                    <div>
+                        <a href="#!"><img src="img/banner-opt.jpg" alt="Оптові закупки"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Items page -->
+        <div class="items-page common-section">
+            <div class="container">
+                <div class="items-page__categories-page common-section">
+                    <a class="items-page__categories active" href="">Новинки</a>
+                    <a class="items-page__categories" href="">Акційний товар</a>
+                </div>
+                <div class="flex-box gap items">
+                    <div class="link-block">
+                        <img src="img/banner-sale-block.jpg" alt="Розпродаж">
+                        <a class="link-block__a-link a-link" href="#!">Дивитись</a>
+                    </div>
+                    <div class="item">
+                        <span class="new">Новинки</span>
+                        <img src="img/batteries.png" alt="Батарейки">
+                        <a href="#!">Батарейки батарейки батарейки батарейки батарейки батарейки батарейки</a>
+                        <p class="assortment">В наявності</p>
+                        <p class="price">53.75 грн</p>
+                    </div>
+                    <div class="item">
+                        <span class="new">Новинки</span>
+                        <img src="img/batteries.png" alt="Батарейки">
+                        <a href="#!">Батарейки батарейки батарейки батарейки батарейки батарейки батарейки</a>
+                        <p class="assortment">В наявності</p>
+                        <p class="price">53.75 грн</p>
+                    </div>
+                    <div class="item">
+                        <span class="new">Новинки</span>
+                        <img src="img/batteries.png" alt="Батарейки">
+                        <a href="#!">Батарейки батарейки батарейки батарейки батарейки батарейки батарейки</a>
+                        <p class="assortment">В наявності</p>
+                        <p class="price">53.75 грн </p>
+                    </div>
+                    <div class="item">
+                        <span class="new">Новинки</span>
+                        <img src="img/batteries.png" alt="Батарейки">
+                        <a href="#!">Батарейки батарейки батарейки батарейки батарейки батарейки батарейки</a>
+                        <p class="assortment">В наявності</p>
+                        <p class="price">53.75 грн</p>
+                    </div>
+                    <div class="item">
+                        <span class="new">Новинки</span>
+                        <img src="img/batteries.png" alt="Батарейки">
+                        <a href="#!">Батарейки батарейки батарейки батарейки батарейки батарейки батарейки</a>
+                        <p class="assortment">В наявності</p>
+                        <p class="price">53.75 грн</p>
+                    </div>
+                    <div class="item">
+                        <span class="new">Новинки</span>
+                        <img src="img/batteries.png" alt="Батарейки">
+                        <a href="#!">Батарейки батарейки батарейки батарейки батарейки батарейки батарейки</a>
+                        <p class="assortment">В наявності</p>
+                        <p class="price">53.75 грн</p>
+                    </div>
+                    <div class="link-block">
+                        <img src="img/banner-sale-block2.jpg" alt="Розпродаж">
+                        <a class="link-block__a-link a-link" href="#!">Дивитись</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Information company -->
+        <div class="information common-section">
+            <div class="container flex-box information__wrapper">
+                <div class="information__item">
+                    <img src="img/delivery.svg" alt="Доставка">
+                    <p>Доставка товару по Україні</p>
+                </div>
+                <div class="information__item">
+                    <img src="img/medal-ribbons.svg" alt="Медаль">
+                    <p>Товари найвищої якості</p>
+                </div>
+                <div class="information__item">
+                    <img src="img/pig.svg" alt="Порося">
+                    <p>Заощаджуй з нами</p>
+                </div>
+                <div class="information__item">
+                    <img src="img/secure.svg" alt="Безпека">
+                    <p>Захист посилок</p>
+                </div>
+            </div>
+        </div>
+        <!-- Company description -->
+        <section class="company-description">
+            <div class="container common-section-text">
+                <h1 class="main-title">Госптовари оптом - все для дому, дачі за вигідними цінами!</h1>
+                <p>
+                    <b>Ласкаво просимо до онлайн магазину оптового та дрібнооптового продажу різноманітних товарів усіх можливих категорій - ідеальний вибір!</b>
+                </p>
+                <p>
+                    Запаси для дому оптом - все для затишку та зручності за вигідними цінами!Ласкаво просимо до нашого онлайн-магазину оптової та дрібнооптової торгівлі широким асортиментом товарів на будь-який смак.
+                </p>
+                <p><b class="subtitle">Хто ми?</b></p>
+                <p>Ми - всеукраїнський оптовий магазин, який пропонує товари за найнижчими цінами.</p>
+                <p><b class="subtitle">Наша ціль</b></p>
+                <p>Забезпечити кожного клієнта можливістю придбати все необхідне за доступною ціною.</p>
+                <h2>Госптовари оптом за приємними цінами!</h2>
+                <ul>
+                    <li>Для дому та інтер'єру.</li>
+                    <li>Для кухні.</li>
+                    <li>Для дачі та саду.</li>
+                    <li>Побутову хімію.</li>
+                </ul>
+                <p>
+                    Закупка товарів для дому оптом може бути цікава власникам невеликих супермаркетів, магазинів "1000 дрібниць", та роздрібних точок. Щоб купити товари для дому за вигідними цінами, вам просто потрібно скористатися нашим інтернет-магазином. Ми пропонуємо товари для господарства (приладдя для прибирання, садові інструменти, побутову хімію, предмети для оформлення інтер'єрів, пластикові товари тощо) за цінами від виробників з Європи, Азії та України.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container flex footer-content">
+            <div class="footer-content__block">
+                <img src="img/logo.png" alt="Логотип">
+                <p><b>Найкращі ціни<br>та відмінний сервіс!</b></p>
+                <div class="footer-content__information"> 
+                    <div class="footer-content__time flex">
+                        <img src="img/time.png" alt="Час значок">
+                        <p>Пн - чт:06:00-13:00 <br> Пт:вихідний <br>Сб - вс:06-00-14:00</p>
+                    </div>
+                    <div class="footer-content__location flex">
+                        <img class="img-location" src="img/location.png" alt="Иконка локация">
+                        <p>пгт. ------, <br>Рынок 7-км,<br>ул. ------, офис ---</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-blocks flex">
+                <div class="footer-block">
+                    <ul>
+                        <li><a href="">Новинки</a></li>
+                        <li><a href="">Знижки</a></li>
+                        <li><a href="">Батарейки</a></li>
+                        <li><a href="">Посуд</a></li>
+                        <li><a href="">Для дому</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <ul>
+                        <li><a href="">Новинки</a></li>
+                        <li><a href="">Знижки</a></li>
+                        <li><a href="">Батарейки</a></li>
+                        <li><a href="">Посуд</a></li>
+                        <li><a href="">Для дому</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <ul>
+                        <li><a href="">Новинки</a></li>
+                        <li><a href="">Знижки</a></li>
+                        <li><a href="">Батарейки</a></li>
+                        <li><a href="">Посуд</a></li>
+                        <li><a href="">Для дому</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <ul>
+                        <li><a href="">Новинки</a></li>
+                        <li><a href="">Знижки</a></li>
+                        <li><a href="">Батарейки</a></li>
+                        <li><a href="">Посуд</a></li>
+                        <li><a href="">Для дому</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
